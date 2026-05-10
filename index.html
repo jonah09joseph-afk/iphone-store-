@@ -1,1 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Store - Premium Apple Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0071e3;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #0071e3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0077ed;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #000;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-card h3 {
+            font-size: 22px;
+            margin: 15px 0;
+            color: #000;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #0071e3;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .description {
+            color: #666;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .features {
+            background: #f5f5f7;
+            padding: 60px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #000;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #0071e3;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">🍎 iPhone Store</a>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to iPhone Store</h1>
+            <p>Experience the latest Apple technology with premium quality and exclusive deals</p>
+            <button class="btn">Shop Now</button>
+        </div>
+    </section>
+
+    <section class="section" id="products">
+        <div class="container">
+            <h2>Our Latest Products</h2>
+            <div class="products">
+                <div class="product-card">
+                    <h3>iPhone 15 Pro</h3>
+                    <div class="price">$999</div>
+                    <div class="description">
+                        Advanced camera system with A17 Pro chip. Titanium design with Dynamic Island.
+                    </div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>iPhone 15</h3>
+                    <div class="price">$799</div>
+                    <div class="description">
+                        Powerful performance with Cinematic mode. Durable glass and aluminum design.
+                    </div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>iPhone 14 Plus</h3>
+                    <div class="price">$649</div>
+                    <div class="description">
+                        Large 6.7-inch display with long battery life. All-day photography and videos.
+                    </div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <h3>iPhone SE</h3>
+                    <div class="price">$429</div>
+                    <div class="description">
+                        Compact design with powerful performance. Great value for iPhone lovers.
+                    </div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>🚚 Fast Shipping</h3>
+                    <p>Free shipping on orders over $50. Express delivery available.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🛡️ Secure Payment</h3>
+                    <p>100% secure transactions with encrypted payment processing.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📞 24/7 Support</h3>
+                    <p>Expert customer support available round the clock for assistance.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>✅ Authentic Products</h3>
+                    <p>Only genuine Apple products with official warranty included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p>📧 Email: <a href="mailto:info@iphonestore.com">info@iphonestore.com</a></p>
+                <p>📱 Phone: +1 (800) 555-APPLE</p>
+                <p>📍 Address: 123 Tech Street, Silicon Valley, CA 94025</p>
+            </div>
+            <p style="margin-top: 20px; border-top: 1px solid #555; padding-top: 20px;">
+                &copy; 2026 iPhone Store. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
